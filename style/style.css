@@ -227,21 +227,39 @@ a.a {
 }
 .section3-div-hover {
     width: 50%;
-    /* background-color: rgb(54, 67, 215);
-    display: inline-block; */
 }
 .section3-img {
     width: 100%;
 }
-/* .section3-div-hover::after {
-    content: "\1F50D";
+.section3-div-hover a {
+    background: rgb(54, 67, 215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.section3-a::before {
     position: absolute;
-    text-align: center;
-
+    width: 1.7em;
+    height: 1.7em;
+    font-size: x-large;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 0;
 }
-.section3-a:hover {
-    opacity: 0.4;
-} */
+.section3-div-hover a img, .section3-a::before {
+    transition: opacity 0.4s linear;
+}
+.section3-div-hover a:hover img {
+    opacity: 0.3;
+}
+.section3-a:hover::before {
+    opacity: 1;
+}
+
 
 
 /* cекция 4 */
@@ -599,7 +617,7 @@ h2.foot-contact-h2{
     }
 
 
-    
+
     .foot {
         display: flex;
         flex-wrap: wrap;
